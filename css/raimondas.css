@@ -1,0 +1,15 @@
+.profilioNuotrauka {
+    padding-top:1em;
+    width: 100%;
+    height: 100%;
+}
+.aukstis {
+    margin-top: 14px;
+    height: 100px;
+}
+header,footer{
+    text-align: center;
+    }
+.flow-text{
+    color:white;
+}
