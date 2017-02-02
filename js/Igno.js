@@ -1,3 +1,9 @@
-/**
- * Created by Vartotojas on 2017.02.01.
- */
+$(document).ready(function(){
+    $("img").click(function(){
+        $(this).animate(width(500).height(500));
+
+
+
+    });
+
+});
