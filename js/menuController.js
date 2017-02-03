@@ -3,6 +3,6 @@ app.controller('menuController', function(){
 
     vm.menu = [
         {'url':'/K6G3V/', 'name':'Padrindinis'},
-        {'url':'kolegos/tautiz.html', 'name':'Tautvydas'}
+        {'url':'/K6G3V/kolegos/tautiz.html', 'name':'Tautvydas'}
     ];
 });
