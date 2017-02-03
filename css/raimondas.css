@@ -13,3 +13,14 @@ header,footer{
 .flow-text{
     color:white;
 }
+.masElem{
+    color: white;
+    background-color: cornflowerblue;
+    width:100px;
+    height: 100px;
+    border: 1px;
+    margin: 3px;
+    display: inline;
+    float: left;
+    overflow: hidden;
+}
