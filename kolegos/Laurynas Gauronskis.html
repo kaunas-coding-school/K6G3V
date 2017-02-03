@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head>
     <title>Svetaines pavadinimas</title>
     <meta charset="UTF-8"/>
@@ -7,9 +7,11 @@
     <link rel="stylesheet" href="css/trecias.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-    <script src="../js/laurynas.js"></script>
+    <!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>-->
+    <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>-->
+    <!--    <script src="../js/laurynas.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="../js/lauControllers/lauController.js"></script>
 
 </head>
 
@@ -73,15 +75,18 @@
         <div class="row">
 
 
-            <form action="#" method="post">
+            <form action="#" method="post" ng-controller="myCtrl">
                 <div class="col s6">
                     <div class="row">
                         <div class="col s8">
-                            <input name="input1" type="text" placeholder="Iveskite savo varda"/>
-                            <textarea name="text" class="materialize-textarea">Iveskite savo zinute</textarea>
+                            <input ng-model="vardas" type="text" placeholder="Iveskite savo varda"/>
+                            <textarea ng-model="zinute" class="materialize-textarea">Iveskite savo zinute</textarea>
                         </div>
                         <div class="col s4">
-                            <input class="waves-effect waves-light btn" style="height: 150px;" type="submit" value="Siusti"/>
+                            <p>{{vardas}} parasyka man zinute: {{zinute}}</p>
+
+                            <input class="waves-effect waves-light btn" style="height: 150px;" type="submit"
+                                   value="Siusti" ng-mouseover="keisti()"/>
 
                         </div>
                     </div>
