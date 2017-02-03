@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head>
     <title>Svetaines pavadinimas</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -8,30 +8,21 @@
     <link rel="stylesheet" href="css/puslapio_struktura.css">
     <link rel="stylesheet" href="css/main.css" />
 
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="js/mainApp.js"></script>
+    <script src="js/menuController.js"></script>
 </head>
 
-
+<body>
 <div class="container">
 
     <header>
-        <h1>Pirmiojii        Zvetaine</h1>
+        <h1>Pirmioji svetaine</h1>
     </header>
 
-    <nav>
+    <nav ng-controller="menuController as mc">
         <ul>
-            <li><a href="index.html">Pirmas puslapis</a></li>
-            <li><a href="antras_puslapis.html">Antras puslapis</a></li>
-            <li><a href="trecias_puslapis.html">Trecias puslapis</a></li>
-            <li><hr/></li>
-            <li><a href="kolegos/raimondas.html">Raimondas</a></li>
-            <li><a href="kolegos/Laurynas%20Gauronskis.html">Laurynas</a></li>
-            <li><a href="kolegos/Daumantas.html">Daumanto</a></li>
-            <li><a href="kolegos/Ignas.html">Ignas</a></li>
-            <li><a href="kolegos/klarkas.html">KLARKAS</a></li>
-            <li><a href="kolegos/tautiz.html">Tautvydas</a></li>
-            <li><a href="kolegos/JonasP.html">Jonas</a></li>
-            <li><a href="kolegos/Kami.html">Kamii</a></li>
-
+            <li ng-repeat="item in mc.menu"><a href="{{item.url}}">{{item.name}}</a></li>
         </ul>
     </nav>
 

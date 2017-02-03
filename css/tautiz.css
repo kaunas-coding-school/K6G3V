@@ -6,3 +6,12 @@
     margin-top: 14px;
     height: 100px;
 }
+.masElem{
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    margin: 3px;
+    display: inline;
+    float: left;
+    overflow: hidden;
+}
