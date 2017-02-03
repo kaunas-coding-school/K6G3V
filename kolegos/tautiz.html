@@ -12,6 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <script src="../js/mainApp.js"></script>
+    <script src="../js/menuController.js"></script>
     <script src="../js/tautvydoControllers/tautvydoController.js"></script>
     <!--<script src="../js/tautiz.js"></script>-->
 </head>
@@ -24,16 +25,11 @@
     </header>
 
     <div class="row">
-        <div class="col s3">
-            <ul class="">
-                <li><a class="waves-effect waves-light btn fiksuotasdydis grey lighten-1" href="../index.html">Pirmas
-                    puslapis</a></li>
-                <li><a class="waves-effect waves-light btn fiksuotasdydis grey lighten-1"
-                       href="../antras_puslapis.html">Antras
-                    puslapis</a></li>
-                <li><a class="waves-effect waves-light btn fiksuotasdydis grey lighten-1"
-                       href="../trecias_puslapis.html">Trecias
-                    puslapis</a></li>
+        <div class="col s3" ng-controller="menuController as mc">
+            <ul>
+                <li ng-repeat="item in mc.menu">
+                    <a class="waves-effect waves-light btn fiksuotasdydis grey lighten-1" href="{{item.url}}">{{item.name}}</a>
+                </li>
             </ul>
         </div>
         <div class="col s9">

@@ -4,13 +4,17 @@
     <title>Svetaines pavadinimas</title>
     <meta charset="UTF-8"/>
 
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="../js/raimondas.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
     <link rel="stylesheet" href="../css/trecias.css">
     <link rel="stylesheet" href="../css/raimondas.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="../js/mainApp.js"></script>
+    <script src="../js/menuController.js"></script>
     <script src="../js/raimondoControllers/raimondoController.js"></script>
 
 </head>
@@ -23,25 +27,21 @@
     </header>
 
     <div class="row">
-        <div class="col s3">
+        <div class="col s3" ng-controller="menuController as mc">
             <ul class="z-depth-5">
-                <li><a class="waves-effect waves-light btn fiksuotasdydis #26a69a lighten-1" href="../index.html">Pirmas puslapis</a></li>
-                <li><a class="waves-effect waves-light btn fiksuotasdydis grey lighten-1" href="../antras_puslapis.html">Antras puslapis</a></li>
-                <li><a class="waves-effect waves-light btn fiksuotasdydis #26a69a" href="../trecias_puslapis.html">Trecias puslapis</a></li>
-                <li><a class="waves-effect waves-light btn fiksuotasdydis grey lighten-1" href="Daumantas.html">Daumantas</a></li>
-                <li><a class="waves-effect waves-light btn fiksuotasdydis #26a69a" href="Ignas.html">Ignas</a></li>
-                <li><a class="waves-effect waves-light btn fiksuotasdydis grey lighten-1" href="JonasP.html">Jonas</a></li>
-                <li><a class="waves-effect waves-light btn fiksuotasdydis #26a69a" href="Kami.html">Kami</a></li>
-                <li><a class="waves-effect waves-light btn fiksuotasdydis grey lighten-1" href="klarkas.html">KLARKAS</a></li>
-                <li><a class="waves-effect waves-light btn fiksuotasdydis #26a69a" href="Laurynas%20Gauronskis.html">Laurynas</a></li>
-                <li><a class="waves-effect waves-light btn fiksuotasdydis grey lighten-1" href="raimondas.html">Raimondas</a></li>
-                <li><a class="waves-effect waves-light btn fiksuotasdydis #26a69a" href="tautiz.html">Tautvydas</a></li>
+                <li ng-repeat="item in mc.menu"><a class="waves-effect waves-light btn fiksuotasdydis grey lighten-1"
+                                                   href="raimondas.html">Raimondas</a></li>
             </ul>
         </div>
-        <div class="col s9">
-
+        <div class="col s9" ng-controller="testCtrl">
+            <div ng-repeat="elementas in masyvas" class="masElem" ;>
+                {{elementas.pavadinimas}}
+                <br/>
+                {{elementas.adresas}}
+            </div>
             <div class="row">
                 <div class="col s4 offset-s4 center teal lighten-1 z-depth-5">
+
 
                     <img src="https://scontent.fvno1-1.fna.fbcdn.net/v/t1.0-9/14449061_10209280687047342_14529563727372055_n.jpg?oh=d9f16fb765f750bf5696f394c28391e4&oe=59154F08"
                          alt="Raimondas" class="profilioNuotrauka">
@@ -50,6 +50,14 @@
             </div>
             <div class="row">
                 <div class="col s6 grey lighten-1 z-depth-5">
+
+
+                    <!--<ul>-->
+                    <!--<li ng-repeat="elementas in masyvas">{(elementas)}</li>-->
+                    <!--</ul>-->
+                    <!--<div ng-repeat="elementas1 in masyvas">{(elementas1)}</div>-->
+
+
                     <form action="#" method="post">
                         <div class="row">
                             <div class="col s8">
