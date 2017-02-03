@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
+    <title>Web</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-    <title>Web</title>
+    <script src="../js/daumanto.js"></script> -->
+
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="structure.css">
+    <script src="../js/DaumaControllers/controller.js"></script>
 </head>
 <body>
 <div class="row">
@@ -30,29 +34,35 @@
         <a href="JonasP.html" class="waves-effect waves-light btn" style="width: 100%">Jonas</a>
 
 
+
     </div>
 
     <div class="col s6 offset-s2">
-        <img src="https://scontent.fvno1-1.fna.fbcdn.net/v/t1.0-9/10409655_761972247159682_7140879260829577799_n.jpg?oh=0084eb30c2867def353c05bca32acded&oe=59447AAB"
-             width="450px" height="450px">
+        <img id="img" src="https://scontent.fvno1-1.fna.fbcdn.net/v/t1.0-9/10409655_761972247159682_7140879260829577799_n.jpg?oh=0084eb30c2867def353c05bca32acded&oe=59447AAB"
+                width="450px" height="450px">
     </div>
     <div class="col s3  card blue-grey darken-1 offset-s4">
-        <form action="@" method="post">
+        <form action="@" method="post" ng-controller="myCtrl">
             <div class="row">
                 <div class="col s7">
-                    <input type="text" name="vardas" placeholder="Iveskite savo varda"/>
+                    <input type="text" ng-model="vardas" placeholder="Iveskite savo varda"/>
                     <input type="text" name="pavarde" placeholder="Iveskite savo pavarde"/>
-                    <textarea name="zinute" placeholder="Iveskite savo zinute"></textarea>
+                    <textarea ng-model="zinute" placeholder="Iveskite savo zinute"></textarea>
                 </div>
                 <div class="col s2">
-                    <a class="waves-effect waves-light btn" style="height: 150px; width: 150px; margin-top: 20px;">
-                        <input type="submit" value="siusti" style="height: 150px; width: 100px"/></a>
+                    <a class="waves-effect waves-light btn" ng-click="keisti()" style="height: 150px; width: 150px; margin-top: 20px;">
+                        <input type="submit" value="siusti"  style="height: 150px; width: 100px"/></a>
+
+                </div>
+                <div class="col s6" ng-controller="testCtrl">
+                    <p>{{vardas}} parasyk man: {{zinute}}</p>
                 </div>
             </div>
 
 
         </form>
     </div>
+
     <div class="col s12 center">
         <footer>Copyright &copy; DP</footer>
     </div>
