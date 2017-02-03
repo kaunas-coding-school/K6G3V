@@ -6,12 +6,11 @@
 
     <link rel="stylesheet" href="css/trecias.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
-
-    <!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>-->
-    <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>-->
-    <!--    <script src="../js/laurynas.js"></script>-->
+    <link rel="stylesheet" href="../css/trecias.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-    <script src="../js/lauControllers/lauController.js"></script>
+
 
 </head>
 
@@ -30,33 +29,10 @@
 
 <div class="row">
     <div class="col s2">
-        <ul class="">
-            <li><a class="waves-effect waves-light btn fiksuotasdydis grey lighten-1" style="width: 100%"
-                   tyle="width: 100%" href="/K6G3V/index.html">Pirmas
-                puslapis</a></li>
-            <li><a class="waves-effect waves-light btn fiksuotasdydis grey lighten-1" style="width: 100%"
-                   href="/K6G3V/antras_puslapis.html">Antras
-                puslapis</a></li>
-            <li><a class="waves-effect waves-light btn fiksuotasdydis grey lighten-1" style="width: 100%"
-                   href="/K6G3V/trecias_puslapis.html">Trecias
-                puslapis</a></li>
-            <li><a class="waves-effect waves-light btn fiksuotasdydis grey lighten-1" style="width: 100%"
-                   tyle="width: 100%" href="Daumantas.html">Daumantas</a></li>
-            <li><a class="waves-effect waves-light btn fiksuotasdydis grey lighten-1" style="width: 100%"
-                   href="Ignas.html">Ignas</a></li>
-            <li><a class="waves-effect waves-light btn fiksuotasdydis grey lighten-1" style="width: 100%"
-                   href="JonasP.html">Jonas</a></li>
-            <li><a class="waves-effect waves-light btn fiksuotasdydis grey lighten-1" style="width: 100%"
-                   href="Kami.html">Kami</a></li>
-            <li><a class="waves-effect waves-light btn fiksuotasdydis grey lighten-1" style="width: 100%"
-                   href="klarkas.html">Klarkas</a></li>
-            <li><a class="waves-effect waves-light btn fiksuotasdydis grey lighten-1" style="width: 100%"
-                   href="Laurynas%20Gauronskis.html">Laurynas</a></li>
-            <li><a class="waves-effect waves-light btn fiksuotasdydis grey lighten-1" style="width: 100%"
-                   href="raimondas.html">Raimondas</a></li>
-            <li><a class="waves-effect waves-light btn fiksuotasdydis grey lighten-1" style="width: 100%"
-                   href="tautiz.html">Tautiz</a></li>
+        <ul class="" ng-controller="myCtrl">
 
+            <li><a ng-repeat="link in menuMasyvas" class="waves-effect waves-light btn grey lighten-1; fiksuotasdydis"
+                   href ={{link.adresas}}>{{link.name}}</a></li>
         </ul>
     </div>
     <div class="col s9">
@@ -72,13 +48,23 @@
 
         <p style="text-align: center">Info apie mane </p>
 
-        <div class="row">
+        <div class="row" ng-controller="myCtrl">
+
+            <div class="col s3">
 
 
-            <form action="#" method="post" ng-controller="myCtrl">
+                    <div ng-repeat="elementas in masyvas" class="masElem">
+                        {{elementas.pavadinimas}}
+                        <br/>
+                        {{elementas.nuoroda}}
+                    </div>
+            </div>
+            <form action="" method="post" ng-controller="myCtrl">
                 <div class="col s6">
                     <div class="row">
                         <div class="col s8">
+
+
                             <input ng-model="vardas" type="text" placeholder="Iveskite savo varda"/>
                             <textarea ng-model="zinute" class="materialize-textarea">Iveskite savo zinute</textarea>
                         </div>
@@ -104,6 +90,11 @@
         <footer>Copyright &copy; </footer>
     </div>
 </div>
+
+<script src="../js/mainApp.js"></script>
+<script src="../js/lauControllers/lauController.js"></script>
+<script src="../js/laurynas.js"></script>
+
 </body>
 
 </html>
