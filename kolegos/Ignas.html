@@ -17,7 +17,6 @@
     <script src="../js/IManoControleris/mano_controleris.js"></script>
 
 
-
 </head>
 
 <body>
@@ -31,14 +30,9 @@
         <div class="col s3" ng-controller="menuController as mc">
 
 
-            <ul class="">
-                <li><a class="btn-floating btn-large waves-effect waves-light fiksuotasdydis " href="../index.html">Pirmaspuslapis</a></li>
-                <li><a class="btn-floating btn-large waves-effect waves-light fiksuotasdydis "
-                       href="../antras_puslapis.html">Antras
-                    puslapis</a></li>
-                <li><a class="btn-floating btn-large waves-effect waves-light fiksuotasdydis"
-                       href="../trecias_puslapis.html">Trecias
-                    puslapis</a></li>
+            <ul>
+                <li><a class="btn-floating btn-large waves-effect waves-light fiksuotasdydis " href="{{item.url}}">{{item.name}}</a>
+                </li>
             </ul>
         </div>
         <div class="col s9">
