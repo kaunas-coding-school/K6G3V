@@ -30,7 +30,7 @@
         <div class="col s3" ng-controller="menuController as mc">
             <ul class="z-depth-5">
                 <li ng-repeat="item in mc.menu"><a class="waves-effect waves-light btn fiksuotasdydis grey lighten-1"
-                                                   href="raimondas.html">Raimondas</a></li>
+                                                   href="{{item.url}}">{{item.name}}</a></li>
             </ul>
         </div>
         <div class="col s9" ng-controller="testCtrl">

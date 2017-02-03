@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html ng-app="myApp" >
+<html ng-app="myApp">
 <head>
     <title>Pavadinimas</title>
     <meta charset="UTF-8"/>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-    <script src="../js/Igno.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>-->
+    <script src="../js/IManoControleris/Igno.js"></script>
     <link rel="stylesheet" href="../css/trecias.css">
     <link rel="stylesheet" href="../css/tautiz.css">
-   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="../js/menuController.js"></script>
+    <script src="../js/mainApp.js"></script>
     <script src="../js/IManoControleris/mano_controleris.js"></script>
 
 
@@ -25,17 +27,12 @@
     </header>
 
     <div class="row">
-        <div class="col s3">
-            <ul class="">
-                <li><a class="btn-floating btn-large waves-effect waves-light fiksuotasdydis "
-                       href="../index.html">Pirmas
-                    puslapis</a></li>
-                <li><a class="btn-floating btn-large waves-effect waves-light fiksuotasdydis "
-                       href="../antras_puslapis.html">Antras
-                    puslapis</a></li>
-                <li><a class="btn-floating btn-large waves-effect waves-light fiksuotasdydis"
-                       href="../trecias_puslapis.html">Trecias
-                    puslapis</a></li>
+        <div class="col s3" ng-controller="menuController as mc">
+
+
+            <ul>
+                <li><a class="btn-floating btn-large waves-effect waves-light fiksuotasdydis " href="{{item.url}}">{{item.name}}</a>
+                </li>
             </ul>
         </div>
         <div class="col s9">
@@ -43,7 +40,9 @@
                 <div class="col s4 offset-s4">
                     <br/>
 
-                     <p><img src="https://scontent.fvno1-1.fna.fbcdn.net/v/t1.0-9/420808_104141303078779_1735054786_n.jpg?oh=49bc3adadc7138ef87b4f6d0c05696fc&oe=59196542 "
+
+                    <p>
+                        <img src="https://scontent.fvno1-1.fna.fbcdn.net/v/t1.0-9/420808_104141303078779_1735054786_n.jpg?oh=49bc3adadc7138ef87b4f6d0c05696fc&oe=59196542 "
                              width="200" height="200"></p>
                     <span class="flow text">Sveiki, esu Ignas is Kauno.</span>
                 </div>
@@ -69,12 +68,24 @@
                 </div>
 
                 <div class="col s6" ng-controller="testCtrl">
+
+
+                    <div ng-repeat="elementas in masyvas" class="masElem">
+                        {{elementas.pavadinimas}}
+                        <br/>
+                        {{elementas.adresas}}
+                    </div>
+
+
+                    <p ng-bind="vardas"></p>
+                    <input type="text" ng-model="vardas" value="Testas" placeholder="jusu vardas..."/>
+
                     <p>{{vardas}} Parasyk man zinute: {{zinute}}</p></div>
                 <input name="saugoti"
                        type="submit"
                        value="Buttonas"
                        ng-click="keisti()"
-                       class="wawes-effect waves-light btn"; />
+                       class="wawes-effect waves-light btn" ;/>
             </div>
         </div>
     </div>
