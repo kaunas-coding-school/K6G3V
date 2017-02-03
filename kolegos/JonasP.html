@@ -6,14 +6,14 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
     <link rel="stylesheet" href="../css/puslapio_struktura.css">
-    <script src="../js/menuController.js"></script>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>-->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
     <script src="../js/mainApp.js"></script>
     <script src="../js/jonas.js"></script>
-
+    <script src="../js/menuController.js"></script>
 
 </head>
 
@@ -25,15 +25,9 @@
 <div class="row">
     <div class="col s2">
 
-        <ul class="">
-            <li><a class="waves-effect waves-light btn fiksuotasdydis grey lighten-1" href="../index.html">Pirmas
-                puslapis</a></li>
-            <li><a class="waves-effect waves-light btn fiksuotasdydis grey lighten-1"
-                   href="../antras_puslapis.html">Antras
-                puslapis</a></li>
-            <li><a class="waves-effect waves-light btn fiksuotasdydis grey lighten-1"
-                   href="../trecias_puslapis.html">Trecias
-                puslapis</a></li>
+        <ul ng-controller="menuController as mc">
+            <li ng-repeat="item in mc.menu"><a class="waves-effect waves-light btn fiksuotasdydis grey lighten-1" href={{item.url}}">{{item.name}}</a></li>
+
         </ul>
         <div ng-controller="jonasCtrl">
             <div ng-repeat="elementas in masyvas" class="masElem">
