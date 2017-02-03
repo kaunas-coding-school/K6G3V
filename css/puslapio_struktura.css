@@ -1,48 +1,12 @@
-div.container {
-    width: 100%;
-    border: 1px solid gray;
-}
 
-header, footer {
-    padding: 1em;
-    color: white;
-    background-color: black;
-    clear: left;
-    text-align: center;
-}
 
-nav {
-    float: left;
-    max-width: 160px;
-    margin: 0;
-    padding: 1em;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul a {
-    text-decoration: none;
-    color: white;
-    background-color: blue;
-    padding: 5px;
-    border: 1px solid aqua;
-    margin: 2px;
-}
-nav ul a:hover {
-    background-color: aquamarine;
-    color: blue;
-}
-
-nav ul li {
-    height: 30px;
-}
-
-article {
-    margin-left: 170px;
-    border-left: 1px dashed #00FF00;
-    padding: 1em;
-    overflow: hidden;
-}
+.masElem {
+     width: 100px;
+     height: 100px;
+     border:1px solid black;
+     margin: 3px;
+     display: inline;
+     float: left;
+     overflow: hidden;
+    background-color: #00FF00;
+ }

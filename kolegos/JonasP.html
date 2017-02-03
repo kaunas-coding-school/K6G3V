@@ -1,76 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head>
     <title>Jono Svetaine</title>
     <meta charset="UTF-8"/>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
-    <link rel="stylesheet" href="../css/trecias.css">
-    <link rel="stylesheet" href="../css/tautiz.css">
+    <link rel="stylesheet" href="../css/puslapio_struktura.css">
+    <script src="../js/menuController.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>-->
-   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <script src="../js/mainApp.js"></script>
     <script src="../js/jonas.js"></script>
+
 
 </head>
 
 
-    <header>
-        <h1>Jono svetaine</h1>
-    </header>
+<header>
+    <h1>Jono svetaine</h1>
+</header>
 
-    <div class="row">
-        <div class="col s2">
-            <ul class="">
-                <li><a class="waves-effect waves-light btn fiksuotasdydis grey lighten-1" href="../index.html">Pirmas
-                    puslapis</a></li>
-                <li><a class="waves-effect waves-light btn fiksuotasdydis grey lighten-1"
-                       href="../antras_puslapis.html">Antras
-                    puslapis</a></li>
-                <li><a class="waves-effect waves-light btn fiksuotasdydis grey lighten-1"
-                       href="../trecias_puslapis.html">Trecias
-                    puslapis</a></li>
-            </ul>
-            <div  ng-app="myApp" ng-controller="myCtrl">
-Mano vardas yra <input type="text" ng ng-model="vardas"><br>
-                Mano pavarde yra <input type="text" ng ng-model="pavarde"><br>
-                vardas ir pavarde pavarde {{vardas+" "+pavarde}}
-            </div>
-        <div class="col s9">
-            <div class="row">
-                <div class="col s4 offset-s4 center card light-green lighten-4">
-                    <br/>
-                    <img src="https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-1/c27.0.160.160/p160x160/16472826_1124575140998654_8410973630367901586_n.jpg?oh=582480a7a40a1b2bc3c96e9674446dc4&oe=593FA565"/>
-                    <span class="flow-text">Tai nedidelis aprasymas apie mane...</span>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col s7 card blue-grey darken-1">
-                    <form action="#" method="post">
-                        <div class="row">
-                            <div class="col s8">
-                                <input type="text" name="vardas" placeholder="Jusu vardas..."/>
-                                <textarea cols="10" name="zinute" placeholder="Jusu zinute..."></textarea>
-                                <input type="text" name="vardas" placeholder="Jusu vardas......" />
-                                <textarea cols="10" name="zinute" placeholder="Jusu zinute......"></textarea>
-                            </div>
-                            <div class="col s4">
-                                <input name="saugoti"
-                                       type="submit"
-                                       value="Siusti"
-                                       class="waves-effect waves-light btn fiksuotas_aukstis">
+<div class="row">
+    <div class="col s2">
 
-                            </div>
-
-                        </div>
-                    </form>
-                </div>
-                <div class="col s6">Parasyk man....</div>
+        <ul class="">
+            <li><a class="waves-effect waves-light btn fiksuotasdydis grey lighten-1" href="../index.html">Pirmas
+                puslapis</a></li>
+            <li><a class="waves-effect waves-light btn fiksuotasdydis grey lighten-1"
+                   href="../antras_puslapis.html">Antras
+                puslapis</a></li>
+            <li><a class="waves-effect waves-light btn fiksuotasdydis grey lighten-1"
+                   href="../trecias_puslapis.html">Trecias
+                puslapis</a></li>
+        </ul>
+        <div ng-controller="jonasCtrl">
+            <div ng-repeat="elementas in masyvas" class="masElem">
+                {{elementas.pavadinimas}}
+                <br>
+                {{elementas.adresas}}
             </div>
+
         </div>
     </div>
-
 </div>
 </body>
 
