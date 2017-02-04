@@ -8,4 +8,7 @@ app.config(function($routeProvider) {
         .when("/tautvydas", {
             templateUrl : "/K6G3V/kolegos/tautiz.html"
         })
+        .when("/kami", {
+            templateUrl : "/K6G3V/kolegos/Kami.html"
+        })
 });
