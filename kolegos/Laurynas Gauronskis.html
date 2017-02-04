@@ -41,19 +41,22 @@
     <div class="col s9">
 
         <div class="row" ng-controller="formaController">
-            <div class="row">
-                <span class="col s3; waves-effect waves-light btn grey lighten-1; fiksuotasdydis" ng-click="fizinis=true">Fizinis asmuo</span>
-                <span class="col s3; waves-effect waves-light btn grey lighten-1; fiksuotasdydis" ng-click="fizinis=false">Juridinis asmuo</span>
+            <div class="row" >
+                <span class="col s6; waves-effect waves-light btn grey lighten-1" ng-click="fizinis=true">Fizinis asmuo</span>
+                <span class="col s6; waves-effect waves-light btn grey lighten-1" ng-click="fizinis=false">Juridinis asmuo</span>
             </div>
+            <div class="row" >
                 <form class="row" action="#" method="post" ng-ignit="fizinis=true">
                     <div ng-show="fizinis">
-                        <span class="waves-effect waves-light btn grey lighten-1; col s6">Fizinis </span>
+                        <span class="waves-effect waves-light btn grey lighten-1; col s3">Fizinis </span>
                     </div>
                     <div  ng-hide="fizinis">
-                        <span class="waves-effect waves-light btn grey lighten-1">Juridinis</span>
+                        <span class="waves-effect waves-light btn grey lighten-1; col s3">Juridinis</span>
                     </div>
                 </form>
             </div>
+            </div>
+
 
 
 
