@@ -9,7 +9,7 @@ app.config(function($routeProvider) {
             templateUrl : "/K6G3V/kolegos/tautiz.html"
         })
         .when("/Laurynas_Gauronskis", {
-            templateUrl : "/K6G3V/kolegos/Laurynas%20Gauronskis.html"
+            templateUrl : "/kolegos/Laurynas%20Gauronskis.html"
         })
         .when("/raimondas", {
             templateUrl: "/K6G3V/kolegos/raimondas.html"
