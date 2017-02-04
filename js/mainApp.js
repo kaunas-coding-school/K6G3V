@@ -21,7 +21,7 @@ app.config(function($routeProvider, $locationProvider) {
             templateUrl:"/kolegos/JonasP.html"
         })
         .when("/ignas", {
-            templateUrl : "/K6G3V/kolegos/Ignas.html"
+            templateUrl : "/kolegos/Ignas.html"
         });
 
     // use the HTML5 History API
