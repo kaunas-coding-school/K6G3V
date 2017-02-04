@@ -17,4 +17,7 @@ app.config(function($routeProvider) {
         .when("/Jonas",{
             templateUrl:"K6G3V/kolegos/JonasP.html"
         })
+        .when("/ignas", {
+            templateUrl : "/K6G3V/kolegos/Ignas.html"
+        })
 });

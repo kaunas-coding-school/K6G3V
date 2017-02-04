@@ -7,7 +7,7 @@ app.controller('menuController', function(){
         {'url':'/raimondas', 'name':'Raimondas'},
         {'url':'/K6G3V/kolegos/Kami.html', 'name':'Kami'},
         {'url':'/Laurynas_Gauronskis', 'name':'Laurynas'},
-        {'url':'/K6G3V/kolegos/Ignas.html', 'name':'Ignas'},
-        {'url':'/Jonas', 'name':'Jonas'}
+        {'url':'/Jonas', 'name':'Jonas'},
+        {'url':'/ignas', 'name':'Ignas'}
     ];
 });
