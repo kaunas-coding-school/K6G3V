@@ -8,9 +8,12 @@ app.config(function($routeProvider) {
         .when("/tautvydas", {
             templateUrl : "/K6G3V/kolegos/tautiz.html"
         })
-        .when("/Laurynas%20Gauronskis", {
+        .when("/Laurynas_Gauronskis", {
             templateUrl : "/K6G3V/kolegos/Laurynas%20Gauronskis.html"
         })
 
 
+        .when("/raimondas", {
+            templateUrl : "/K6G3V/kolegos/raimondas.html"
+        })
 });
