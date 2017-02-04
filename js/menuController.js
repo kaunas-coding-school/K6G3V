@@ -8,6 +8,6 @@ app.controller('menuController', function(){
         {'url':'/K6G3V/kolegos/Kami.html', 'name':'Kami'},
         {'url':'/Laurynas_Gauronskis', 'name':'Laurynas'},
         {'url':'/K6G3V/kolegos/Ignas.html', 'name':'Ignas'},
-        {'url':'/K6G3V/kolegos/JonasP.html', 'name':'Jonas'}
+        {'url':'/Jonas', 'name':'Jonas'}
     ];
 });
