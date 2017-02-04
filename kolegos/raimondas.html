@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="../css/raimondas.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+
     <script src="../js/mainApp.js"></script>
     <script src="../js/menuController.js"></script>
     <script src="../js/raimondoControllers/raimondoController.js"></script>
@@ -24,17 +26,21 @@
 
     <header>
         <h1 class="z-depth-5">RAIMONDAS RIMAS</h1>
+
+
     </header>
 
     <div class="row">
         <div class="col s3" ng-controller="menuController as mc">
             <ul class="z-depth-5">
-                <li ng-repeat="item in mc.menu"><a href="{{item.url}}" class="waves-effect waves-light btn fiksuotasdydis grey lighten-1"
-                                                   >{{item.name}}</a></li>
+                <li ng-repeat="item in mc.menu"><a href="{{item.url}}"
+                                                   class="waves-effect waves-light btn fiksuotasdydis grey lighten-1"
+                >{{item.name}}</a></li>
             </ul>
         </div>
-        <div class="col s9" ng-controller="testCtrl">
-            <div ng-repeat="elementas in masyvas" class="masElem" ;>
+
+        <div class="col s9" ng-controller="myCtrl">
+            <div ng-repeat="elementas in masyvas" class="masElem">
                 {{elementas.pavadinimas}}
                 <br/>
                 {{elementas.adresas}}
@@ -61,6 +67,13 @@
                     <form action="#" method="post">
                         <div class="row">
                             <div class="col s8">
+                                <span ng-click="fizinis=true" class="btn">[FIZINIS ASMUO]</span>
+                                <span ng-click="fizinis=false" class="btn">[JURIDINIS ASMUO]</span>
+
+                                <form action="#" method="post" ng-init="fizinis=true">
+                                    <div class="row animacija" ng-show="!fizinis">Vardas</div>
+                                    <div class="row animacija" ng-hide="fizinis">Pavarde</div>
+                                </form>
                                 <input type="text" ng-model="vardas" placeholder="Jūsų vardas..."/>
                                 <textarea cols="10" ng-model="zinute" placeholder="Jūsų žinutė..."></textarea>
                             </div>
