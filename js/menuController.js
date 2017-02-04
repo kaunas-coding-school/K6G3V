@@ -10,7 +10,6 @@ app.controller('menuController', function(){
         {'url':'/raimondas', 'name':'Raimondas'},
         {'url':'/K6G3V/kolegos/Kami.html', 'name':'Kami'},
         {'url':'/Laurynas_Gauronskis', 'name':'Laurynas'},
-        {'url':'/K6G3V/kolegos/Ignas.html', 'name':'Ignas'},
         {'url':'/ignas', 'name':'Ignas'},
         {'url':'/K6G3V/kolegos/JonasP.html', 'name':'Jonas'}
     ];
