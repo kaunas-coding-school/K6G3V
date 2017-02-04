@@ -4,12 +4,16 @@
     <title>Svetaines pavadinimas</title>
 
     <meta charset="UTF-8"/>
+    <base href="/">
+
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/puslapio_struktura.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
 
     <script src="js/mainApp.js"></script>
     <script src="js/menuController.js"></script>
@@ -29,7 +33,11 @@
         </ul>
     </div>
 
-    <article>
+
+    <ng-view></ng-view>
+
+
+<!--    <article>
         <h1 id="antraste1" style="background-color:green;color: red;font-family:verdana;">Antraštė</h1>
         <p title="Pirmasis paragrafas" style="background-color:powderblue;">
         <form action="index.html" method="get" ng-controller="formaController as fc" ng-init="fc.fizinis=true">
@@ -67,7 +75,7 @@
             fermentum ligula bibendum sed. Vivamus hendrerit semper odio sed pellentesque. Nulla facilisi. Morbi finibus
             efficitur lacinia. Pellentesque consectetur nisi vitae tempus scelerisque. Suspendisse potenti.
         </p>
-    </article>
+    </article>-->
 
     <footer>Copyright &copy; Tautvydas Dulskis</footer>
 
