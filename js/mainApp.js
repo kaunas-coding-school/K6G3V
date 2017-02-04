@@ -12,7 +12,10 @@ app.config(function($routeProvider) {
             templateUrl : "/K6G3V/kolegos/Laurynas%20Gauronskis.html"
         })
         .when("/raimondas", {
-            templateUrl : "/K6G3V/kolegos/raimondas.html"
+            templateUrl: "/K6G3V/kolegos/raimondas.html"
+        })
+        .when("/kami", {
+            templateUrl : "/K6G3V/kolegos/Kami.html"
         })
         .when("/Jonas",{
             templateUrl:"K6G3V/kolegos/JonasP.html"

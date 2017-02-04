@@ -49,4 +49,16 @@ header, main, footer {
     overflow: hidden;
 }
 
+.animacija{
+    transition: all linear 0.5s;
+    background-color: gainsboro;
+    height: 100px;
+}
+
+
+
+.ng-hide {
+    height: 0;
+}
+
 
