@@ -1,26 +1,29 @@
 var app = angular.module('myApp', ['ngAnimate','ngRoute']);
 
-app.config(function($routeProvider) {
+app.config(function($routeProvider, $locationProvider) {
     $routeProvider
         .when("/", {
-            templateUrl : "/K6G3V/index.htm"
+            templateUrl : "/antras_puslapis.html"
         })
         .when("/tautvydas", {
-            templateUrl : "/K6G3V/kolegos/tautiz.html"
+            templateUrl : "/kolegos/tautiz.html"
         })
         .when("/Laurynas_Gauronskis", {
-            templateUrl : "/K6G3V/kolegos/Laurynas%20Gauronskis.html"
+            templateUrl : "/kolegos/Laurynas%20Gauronskis.html"
         })
         .when("/raimondas", {
-            templateUrl: "/K6G3V/kolegos/raimondas.html"
+            templateUrl: "/kolegos/raimondas.html"
         })
         .when("/kami", {
             templateUrl : "/kolegos/Kami.html"
         })
         .when("/Jonas",{
-            templateUrl:"K6G3V/kolegos/JonasP.html"
+            templateUrl:"/kolegos/JonasP.html"
         })
         .when("/ignas", {
             templateUrl : "/K6G3V/kolegos/Ignas.html"
-        })
+        });
+
+    // use the HTML5 History API
+    $locationProvider.html5Mode(true);
 });
