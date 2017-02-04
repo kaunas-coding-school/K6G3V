@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
@@ -27,55 +29,58 @@
         <h1>Pirmioji svetaine</h1>
     </header>
 
-    <div ng-controller="menuController as mc">
-        <ul>
-            <li ng-repeat="item in mc.menu"><a href="{{item.url}}">{{item.name}}</a></li>
-        </ul>
+    <div class="row">
+        <div ng-controller="menuController as mc" class="col s3">
+            <ul>
+                <li ng-repeat="item in mc.menu">
+                    <a class="waves-effect waves-light btn fiksuotasdydis grey lighten-1" href="{{item.url}}">{{item.name}}</a>
+                </li>
+            </ul>
+        </div>
+
+        <ng-view class="col s9"></ng-view>
+
     </div>
 
-
-    <ng-view></ng-view>
-
-
-<!--    <article>
-        <h1 id="antraste1" style="background-color:green;color: red;font-family:verdana;">Antraštė</h1>
-        <p title="Pirmasis paragrafas" style="background-color:powderblue;">
-        <form action="index.html" method="get" ng-controller="formaController as fc" ng-init="fc.fizinis=true">
-            <span ng-click="fc.fizinis=true">[FIZINIS ASMUO]</span>
-            <span ng-click="fc.fizinis=false">[JURIDINIS ASMUO]</span>
-            <div class="row">
-                <div class="col s6" ng-show="fc.fizinis">
-                    FIzinis...
+    <!--    <article>
+            <h1 id="antraste1" style="background-color:green;color: red;font-family:verdana;">Antraštė</h1>
+            <p title="Pirmasis paragrafas" style="background-color:powderblue;">
+            <form action="index.html" method="get" ng-controller="formaController as fc" ng-init="fc.fizinis=true">
+                <span ng-click="fc.fizinis=true">[FIZINIS ASMUO]</span>
+                <span ng-click="fc.fizinis=false">[JURIDINIS ASMUO]</span>
+                <div class="row">
+                    <div class="col s6" ng-show="fc.fizinis">
+                        FIzinis...
+                    </div>
+                    <div class="col s6 offset-s6" ng-hide="fc.fizinis">
+                        Juridinis...
+                    </div>
                 </div>
-                <div class="col s6 offset-s6" ng-hide="fc.fizinis">
-                    Juridinis...
-                </div>
-            </div>
-        </form>
-        </p>
-        <h2 id="antraste2" style="background-color:green;color: red;font-family:verdana;">Antraste 2</h2>
-        <p title="Antrasis paragrafas">
-            Etiam sagittis maximus justo. Nullam sollicitudin gravida molestie. Mauris non auctor est. Vivamus imperdiet
-            lacus
-            et porttitor tincidunt. In venenatis, metus eu finibus egestas, enim quam porttitor lacus, nec volutpat orci
-            leo et
-            nulla. Suspendisse potenti. Nullam eget risus sed ligula placerat blandit. Praesent vehicula lacus id tellus
-            consequat varius. Quisque dictum non nunc sit amet ullamcorper. Suspendisse potenti. Maecenas nunc ligula,
-            venenatis
-            sed est sit amet, vehicula vulputate tellus. Donec mollis bibendum mi.
-        </p>
-        <h2 style="background-color:green;color: red;font-family:verdana;">Antraste3</h2>
-        <p title="Treciasis paragrafas">
-            Proin ornare nisl ac dui dictum, quis auctor mi tincidunt. Proin imperdiet fermentum nibh, id tincidunt
-            augue
-            finibus ac. Cras id accumsan lorem, ac hendrerit enim. Nunc quis nisi pellentesque, blandit ligula at,
-            malesuada
-            turpis. Duis dignissim arcu purus, vitae maximus magna feugiat id. Mauris fermentum sagittis magna,
-            porttitor
-            fermentum ligula bibendum sed. Vivamus hendrerit semper odio sed pellentesque. Nulla facilisi. Morbi finibus
-            efficitur lacinia. Pellentesque consectetur nisi vitae tempus scelerisque. Suspendisse potenti.
-        </p>
-    </article>-->
+            </form>
+            </p>
+            <h2 id="antraste2" style="background-color:green;color: red;font-family:verdana;">Antraste 2</h2>
+            <p title="Antrasis paragrafas">
+                Etiam sagittis maximus justo. Nullam sollicitudin gravida molestie. Mauris non auctor est. Vivamus imperdiet
+                lacus
+                et porttitor tincidunt. In venenatis, metus eu finibus egestas, enim quam porttitor lacus, nec volutpat orci
+                leo et
+                nulla. Suspendisse potenti. Nullam eget risus sed ligula placerat blandit. Praesent vehicula lacus id tellus
+                consequat varius. Quisque dictum non nunc sit amet ullamcorper. Suspendisse potenti. Maecenas nunc ligula,
+                venenatis
+                sed est sit amet, vehicula vulputate tellus. Donec mollis bibendum mi.
+            </p>
+            <h2 style="background-color:green;color: red;font-family:verdana;">Antraste3</h2>
+            <p title="Treciasis paragrafas">
+                Proin ornare nisl ac dui dictum, quis auctor mi tincidunt. Proin imperdiet fermentum nibh, id tincidunt
+                augue
+                finibus ac. Cras id accumsan lorem, ac hendrerit enim. Nunc quis nisi pellentesque, blandit ligula at,
+                malesuada
+                turpis. Duis dignissim arcu purus, vitae maximus magna feugiat id. Mauris fermentum sagittis magna,
+                porttitor
+                fermentum ligula bibendum sed. Vivamus hendrerit semper odio sed pellentesque. Nulla facilisi. Morbi finibus
+                efficitur lacinia. Pellentesque consectetur nisi vitae tempus scelerisque. Suspendisse potenti.
+            </p>
+        </article>-->
 
     <footer>Copyright &copy; Tautvydas Dulskis</footer>
 
