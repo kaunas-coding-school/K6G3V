@@ -9,14 +9,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
     <script src="../js/mainApp.js"></script>
     <script src="../js/KamiControleris.js"></script>
     <script src="../js/menuController.js"></script>
+    <script src="../js/KamiFormosControlleris.js"></script>
+
 
 
 </head>
 
-<body>
+<body ng-app="myApp">
 <div class="kami">
 
     <header>Trumpai apie mane</header>
@@ -69,7 +72,7 @@
                                 <div class="col s3">
 
                                     <button class="btn waves-effect waves-light grey lighten-1 fiksuotas" type="submit"
-                                            name="action">
+                                            name="action"><div ng-hide="myCheck"></div>
                                         Siųsti
                                     </button>
                                 </div>
@@ -82,8 +85,24 @@
                         <article class="pasukti"><b>Parašyk man.</b></article>
                     </div>
                 </div>
+
+                <div class="col s6 card blue-grey darken-1" ng-controller="myCtrl">
+
+                    <span ng-click="fizinis=true" class="btn">Fizinis asmuo</span>
+                    <span ng-click="fizinis=false" class="btn">Juridinis asmuo</span>
+
+                <form action="#" method="post"  ng-init="fizinis=true">
+                    <div class = "row" ng-show="fizinis"> Fizinis </div>
+                     <div class="row" ng-hide="fizinis"> Juridinis </div>
+
+                </form>
+                </div>
             </div>
+
+
         </div>
+
+
     </div>
 </div>
 </div>
