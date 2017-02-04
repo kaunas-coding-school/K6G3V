@@ -15,3 +15,11 @@
     float: left;
     overflow: hidden;
 }
+
+.animacija {
+    transition: all linear 0.5s;
+    height: 200px;
+}
+.ng-hide {
+    height: 0;
+}

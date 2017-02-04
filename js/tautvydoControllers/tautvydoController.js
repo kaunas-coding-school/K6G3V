@@ -1,7 +1,7 @@
 app.controller('myCtrl', function($scope) {
 
-    $scope.vardas = "Tautvydas";
-    $scope.zinute = "Mano grazi zinute";
+    // $scope.vardas = "Tautvydas";
+    // $scope.zinute = "Mano grazi zinute";
 
 });
 
