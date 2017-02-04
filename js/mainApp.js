@@ -14,7 +14,6 @@ app.config(function($routeProvider) {
         .when("/Laurynas_Gauronskis", {
             templateUrl : "/K6G3V/kolegos/Laurynas%20Gauronskis.html"
         })
-
         .when("/raimondas", {
 
 });
