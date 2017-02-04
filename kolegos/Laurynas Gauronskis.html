@@ -10,6 +10,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+
 
 
 
@@ -18,24 +20,42 @@
 <body>
 
 
-    <div class="row">
-        <div class="col s12">
-            <header>
-                <h1 style="text-align: center">Laurynas</h1>
-            </header>
-        </div>
+<div class="row">
+    <div class="col s12">
+        <header>
+            <h1 style="text-align: center">Laurynas</h1>
+        </header>
     </div>
+</div>
 
 
 <div class="row">
     <div class="col s2">
         <ul class="" ng-controller="menuController as mc">
 
-            <li ng-repeat="item in mc.menu" class="waves-effect waves-light btn grey lighten-1; fiksuotasdydis"><a href ={{item.url}}>{{item.name}}</a></li>
+            <li ng-repeat="item in mc.menu" class="waves-effect waves-light btn grey lighten-1; fiksuotasdydis"><a
+                    href={{item.url}}>{{item.name}}</a></li>
 
         </ul>
     </div>
     <div class="col s9">
+
+        <div class="row" ng-controller="formaController">
+            <div class="row">
+                <span class="col s3; waves-effect waves-light btn grey lighten-1; fiksuotasdydis" ng-click="fizinis=true">Fizinis asmuo</span>
+                <span class="col s3; waves-effect waves-light btn grey lighten-1; fiksuotasdydis" ng-click="fizinis=false">Juridinis asmuo</span>
+            </div>
+                <form class="row" action="#" method="post" ng-ignit="fizinis=true">
+                    <div ng-show="fizinis">
+                        <span class="waves-effect waves-light btn grey lighten-1; col s6">Fizinis </span>
+                    </div>
+                    <div  ng-hide="fizinis">
+                        <span class="waves-effect waves-light btn grey lighten-1">Juridinis</span>
+                    </div>
+                </form>
+            </div>
+
+
 
         <div class="row">
             <div class="col s12 offset-s5">
@@ -54,11 +74,11 @@
             <div class="col s3">
 
 
-                    <div ng-repeat="elementas in masyvas" class="masElem">
-                        {{elementas.pavadinimas}}
-                        <br/>
-                        {{elementas.nuoroda}}
-                    </div>
+                <div ng-repeat="elementas in masyvas" class="masElem">
+                    {{elementas.pavadinimas}}
+                    <br/>
+                    {{elementas.nuoroda}}
+                </div>
             </div>
             <form action="" method="post" ng-controller="myCtrl">
                 <div class="col s6">
