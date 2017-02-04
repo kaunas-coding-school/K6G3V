@@ -15,7 +15,7 @@ app.config(function($routeProvider, $locationProvider) {
             templateUrl: "/kolegos/raimondas.html"
         })
         .when("/kami", {
-            templateUrl : "/K6G3V/kolegos/Kami.html"
+            templateUrl : "/kolegos/Kami.html"
         })
         .when("/Jonas",{
             templateUrl:"/kolegos/JonasP.html"
