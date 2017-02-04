@@ -9,19 +9,19 @@ app.config(function($routeProvider, $locationProvider) {
             templateUrl : "/kolegos/tautiz.html"
         })
         .when("/Laurynas_Gauronskis", {
-            templateUrl : "/K6G3V/kolegos/Laurynas%20Gauronskis.html"
+            templateUrl : "/kolegos/Laurynas%20Gauronskis.html"
         })
         .when("/raimondas", {
-            templateUrl: "/K6G3V/kolegos/raimondas.html"
+            templateUrl: "/kolegos/raimondas.html"
         })
         .when("/kami", {
-            templateUrl : "/K6G3V/kolegos/Kami.html"
+            templateUrl : "/kolegos/Kami.html"
         })
         .when("/Jonas",{
-            templateUrl:"K6G3V/kolegos/JonasP.html"
+            templateUrl:"/kolegos/JonasP.html"
         })
         .when("/ignas", {
-            templateUrl : "/K6G3V/kolegos/Ignas.html"
+            templateUrl : "/kolegos/Ignas.html"
         });
 
     // use the HTML5 History API
