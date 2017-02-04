@@ -9,5 +9,6 @@ app.controller('menuController', function(){
         {'url':'/Laurynas_Gauronskis', 'name':'Laurynas'},
         {'url':'/Jonas', 'name':'Jonas'},
         {'url':'/ignas', 'name':'Ignas'}
+
     ];
 });
