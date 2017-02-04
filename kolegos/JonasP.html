@@ -10,34 +10,46 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>-->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
     <script src="../js/mainApp.js"></script>
     <script src="../js/jonas.js"></script>
     <script src="../js/menuController.js"></script>
 
 </head>
+<body>
+<div class="container">
+    <header>
+        <h1>Jono svetaine</h1>
+    </header>
 
 
-<header>
-    <h1>Jono svetaine</h1>
-</header>
+    <div class="rows">
+        <div class="col s5 offset-s4 ">
 
-<div class="row">
-    <div class="col s2">
-
-        <ul ng-controller="menuController as mc">
-            <li ng-repeat="item in mc.menu"><a class="waves-effect waves-light btn fiksuotasdydis grey lighten-1" href={{item.url}}">{{item.name}}</a></li>
-
-        </ul>
-        <div ng-controller="jonasCtrl">
-            <div ng-repeat="elementas in masyvas" class="masElem">
-                {{elementas.pavadinimas}}
-                <br>
-                {{elementas.adresas}}
-            </div>
+            <img src="https://scontent.fvno1-1.fna.fbcdn.net/v/t1.0-1/c27.0.160.160/p160x160/16472826_1124575140998654_8410973630367901586_n.jpg?oh=582480a7a40a1b2bc3c96e9674446dc4&oe=593FA565"
+                 width="100" height="100"/>
 
         </div>
     </div>
+    <div class="row">
+        <div claas="col s4">
+
+            <ul ng-controller="menuController as mc">
+                <li ng-repeat="item in mc.menu"><a class="waves-effect waves-light btn fiksuotasdydis grey lighten-1"
+                                                   href={{item.url}}">{{item.name}}</a></li>
+
+            </ul>
+
+            <div ng-controller="jonasCtrl">
+                <div ng-repeat="elementas in masyvas" class="masElem">
+                    {{elementas.pavadinimas}}
+                    {{elementas.adresas}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 </div>
 </body>
 
